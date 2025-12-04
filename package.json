@@ -2,7 +2,16 @@
   "name": "@connorbritain/mssql-mcp-writer",
   "version": "0.1.0",
   "description": "MCP server for Microsoft SQL Server with read and data operations - no DDL/schema changes",
-  "keywords": ["mcp", "sql-server", "mssql", "database", "ai", "claude", "windsurf", "model-context-protocol"],
+  "keywords": [
+    "mcp",
+    "sql-server",
+    "mssql",
+    "database",
+    "ai",
+    "claude",
+    "windsurf",
+    "model-context-protocol"
+  ],
   "author": "Connor England <connor.r.england@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -34,6 +43,7 @@
   },
   "dependencies": {
     "@azure/identity": "^4.4.0",
+    "@connorbritain/mssql-mcp-writer": "^0.1.0",
     "@modelcontextprotocol/sdk": "^1.23.0",
     "dotenv": "^16.4.5",
     "mssql": "^10.0.1"
