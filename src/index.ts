@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 import { startMcpServer } from "@connorbritain/mssql-mcp-core";
+import pkg from "../package.json" with { type: "json" };
 
 startMcpServer({
   name: "mssql-mcp-writer",
-  version: "0.2.0",
+  version: pkg.version,
   tier: "writer",
 }).catch((e) => {
   console.error("Fatal:", e);

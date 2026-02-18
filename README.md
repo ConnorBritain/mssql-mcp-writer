@@ -7,6 +7,18 @@
 
 Full data manipulation capabilities (INSERT, UPDATE, DELETE) with preview/confirm safeguards, but no DDL operations. Ideal for data engineers and ETL workflows where you need to modify data but want to prevent schema changes.
 
+## Architecture
+
+This package is a thin wrapper around [`@connorbritain/mssql-mcp-core`](https://github.com/ConnorBritain/mssql-mcp-core), which contains all shared logic, tools, and governance features. The wrapper selects the `"writer"` tier and delegates to the core's `startMcpServer()` function. This design enables:
+
+- **Hard separation** at the package level — regulated enterprises can guarantee that certain builds physically cannot perform destructive operations
+- **Independent versioning** — each tier can be published separately with its own release cycle
+- **Clear audit trail** — `"we only allow mssql-mcp-writer in staging"` is a compile-time guarantee
+
+The core library handles all SQL Server connections, tool dispatch, audit logging, and governance enforcement.
+
+---
+
 ## Package Tiers
 
 | Package | npm | Tools | Use Case |

@@ -1,6 +1,7 @@
 {
   "name": "@connorbritain/mssql-mcp-writer",
-  "version": "0.2.0",
+  "mcpName": "io.github.ConnorBritain/mssql-writer",
+  "version": "0.3.1",
   "description": "MCP server for Microsoft SQL Server with read and data operations - no DDL/schema changes",
   "keywords": [
     "mcp",
@@ -42,7 +43,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@connorbritain/mssql-mcp-core": "^0.1.1"
+    "@connorbritain/mssql-mcp-core": "^0.1.5"
   },
   "type": "module"
 }
